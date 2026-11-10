@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwitchMate</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="sm-app">
+    <!-- Header -->
+    <header class="sm-header">
+      <div class="sm-header-left">
+        <div class="sm-logo-badge">🎯</div>
+        <div>
+          <h1 class="sm-app-title">SwitchMate</h1>
+          <span class="sm-today-date" id="sm-date-display">Today</span>
+        </div>
+      </div>
+      <div class="sm-header-actions">
+        <button id="sm-options-btn" class="sm-icon-btn" title="Settings & Categories">⚙️</button>
+      </div>
+    </header>
+
+    <!-- Local Gemini Nano Status Banner -->
+    <div class="sm-ai-status-bar" id="nano-status-bar">
+      <div class="sm-ai-status-left">
+        <span class="sm-ai-pulse checking" id="nano-indicator"></span>
+        <span class="sm-ai-label" id="nano-status-label">Gemini Nano: Detecting On-Device AI...</span>
+      </div>
+      <span class="sm-ai-chip" id="nano-chip-badge">Local LLM</span>
+    </div>
+
+    <!-- Daily Progress Summary -->
+    <section class="sm-progress-banner">
+      <div class="sm-progress-info">
+        <span class="sm-progress-label">Daily Interview & Habit Score</span>
+        <span class="sm-progress-percentage" id="sm-score-text">0% Complete</span>
+      </div>
+      <div class="sm-progress-track">
+        <div class="sm-progress-fill" id="sm-progress-bar" style="width: 0%;"></div>
+      </div>
+    </section>
+
+    <!-- Gemini Nano Interview Drill Section -->
+    <section class="sm-section nano-section">
+      <div class="sm-section-header-flex">
+        <h2 class="sm-section-title">🧠 ON-DEVICE INTERVIEW DRILL</h2>
+        <button class="sm-nano-generate-btn" id="btn-generate-q" title="Generates a mock question on-device using local Gemini Nano">
+          <span>⚡</span> Test Me
+        </button>
+      </div>
+      <div class="sm-nano-card" id="nano-drill-card" style="display: none;">
+        <div class="sm-nano-q-header">
+          <span class="sm-nano-topic-tag" id="nano-card-topic">Android Topic</span>
+          <span class="sm-nano-difficulty" id="nano-card-diff">Intermediate</span>
+        </div>
+        <p class="sm-nano-question" id="nano-card-question">Generating interview challenge...</p>
+        <div class="sm-nano-hint-box" id="nano-card-hint-box" style="display: none;">
+          <strong>💡 Hint:</strong> <span id="nano-card-hint"></span>
+        </div>
+        <div class="sm-nano-card-actions">
+          <button class="sm-btn-nano-secondary" id="btn-show-hint">Show Hint</button>
+          <button class="sm-btn-nano-primary" id="btn-mark-q-solved">✓ Solved (+1)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals Checklist -->
+    <section class="sm-section">
+      <h2 class="sm-section-title">DAILY ACCOUNTABILITY GOALS</h2>
+
+      <!-- Goal 1: Android Dev Prep -->
+      <div class="sm-goal-card android-theme" id="card-android">
+        <div class="sm-goal-top">
+          <label class="sm-checkbox-container">
+            <input type="checkbox" id="goal-android-check">
+            <span class="sm-checkmark"></span>
+          </label>
+          <div class="sm-goal-details">
+            <div class="sm-goal-header-line">
+              <span class="sm-goal-name">🤖 Android Dev Interview Prep</span>
+              <span class="sm-time-badge" id="android-study-time">0m tracked</span>
+            </div>
+            <div class="sm-topic-row">
+              <input type="text" id="android-topic-input" class="sm-inline-input" placeholder="Today's focus topic (e.g. Coroutines, Compose)" />
+            </div>
+            <div class="sm-counter-row">
+              <span class="sm-counter-label">Problems Solved:</span>
+              <div class="sm-counter-controls">
+                <button class="sm-counter-btn" id="btn-dec-solved">-</button>
+                <span class="sm-counter-value" id="questions-count">0</span>
+                <button class="sm-counter-btn" id="btn-inc-solved">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 2: Investment Tracking -->
+      <div class="sm-goal-card investment-theme" id="card-investments">
+        <div class="sm-goal-top">
+          <label class="sm-checkbox-container">
+            <input type="checkbox" id="goal-investments-check">
+            <span class="sm-checkmark"></span>
+          </label>
+          <div class="sm-goal-details">
+            <div class="sm-goal-header-line">
+              <span class="sm-goal-name">📈 Track Investments & Portfolio</span>
+              <span class="sm-status-chip" id="investments-status">Pending</span>
+            </div>
+            <div class="sm-goal-subtext">Review allocations & watchlist. Avoid emotional trades.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 3: Workout & Mobility -->
+      <div class="sm-goal-card workout-theme" id="card-workout">
+        <div class="sm-goal-top">
+          <label class="sm-checkbox-container">
+            <input type="checkbox" id="goal-workout-check">
+            <span class="sm-checkmark"></span>
+          </label>
+          <div class="sm-goal-details">
+            <div class="sm-goal-header-line">
+              <span class="sm-goal-name">🏃 Workout & Mobility Exercise</span>
+              <span class="sm-status-chip" id="workout-status">Pending</span>
+            </div>
+            <div class="sm-goal-subtext">Strengthen body & mobility drills for physical energy.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 4: LinkedIn Mindful Mode -->
+      <div class="sm-goal-card linkedin-theme" id="card-linkedin">
+        <div class="sm-goal-top">
+          <label class="sm-toggle-switch">
+            <input type="checkbox" id="toggle-linkedin-shield" checked>
+            <span class="sm-slider round"></span>
+          </label>
+          <div class="sm-goal-details">
+            <div class="sm-goal-header-line">
+              <span class="sm-goal-name">💼 LinkedIn Doom-Scroll Shield</span>
+              <span class="sm-shield-chip active" id="linkedin-shield-status">Active</span>
+            </div>
+            <div class="sm-goal-subtext">Feeds blocked. Access Jobs, Messaging & Network directly.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Time Distribution Today -->
+    <section class="sm-section">
+      <div class="sm-section-header-flex">
+        <h2 class="sm-section-title">TODAY'S SCREEN TIME</h2>
+        <span class="sm-total-time" id="sm-total-time-text">0m Total</span>
+      </div>
+
+      <!-- Ratio Bar -->
+      <div class="sm-ratio-bar">
+        <div class="sm-ratio-segment goal" id="bar-goal" style="width: 50%;" title="Goal-Aligned Time"></div>
+        <div class="sm-ratio-segment distraction" id="bar-distraction" style="width: 25%;" title="Distractions"></div>
+        <div class="sm-ratio-segment neutral" id="bar-neutral" style="width: 25%;" title="Other Sites"></div>
+      </div>
+
+      <div class="sm-legend-row">
+        <div class="sm-legend-item">
+          <span class="sm-legend-dot goal"></span>
+          <span>Goal Focus: <strong id="time-goal-text">0m</strong></span>
+        </div>
+        <div class="sm-legend-item">
+          <span class="sm-legend-dot distraction"></span>
+          <span>Distractions: <strong id="time-distraction-text">0m</strong></span>
+        </div>
+      </div>
+
+      <!-- Top Sites List -->
+      <div class="sm-top-sites" id="sm-top-sites-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Active Tab Quick Status & AI Inspector -->
+    <footer class="sm-footer">
+      <div class="sm-current-site">
+        <span class="sm-current-label">Tab:</span>
+        <span class="sm-current-domain" id="sm-current-domain-text">Detecting...</span>
+      </div>
+      <div class="sm-footer-btns">
+        <button class="sm-btn-xs" id="sm-ai-check-btn" title="Ask local Gemini Nano to classify current page">🧠 AI Check</button>
+        <button class="sm-btn-xs" id="sm-tag-current-btn">Tag</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../utils/gemini-nano.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

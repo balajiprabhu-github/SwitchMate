@@ -1,0 +1,705 @@
+/* SwitchMate - Popup Styles with Local Gemini Nano AI support */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 390px;
+  min-height: 620px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.sm-app {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+/* Header */
+.sm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sm-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sm-logo-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.sm-app-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.sm-today-date {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.sm-icon-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.15s ease;
+}
+
+.sm-icon-btn:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+/* Gemini Nano Status Bar */
+.sm-ai-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.sm-ai-status-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sm-ai-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sm-ai-pulse.active {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.sm-ai-pulse.checking {
+  background: #f59e0b;
+}
+
+.sm-ai-pulse.disabled {
+  background: #64748b;
+}
+
+.sm-ai-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.sm-ai-chip {
+  font-size: 10px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Progress Score Banner */
+.sm-progress-banner {
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.sm-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sm-progress-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+}
+
+.sm-progress-percentage {
+  font-size: 12px;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.sm-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #0b0f19;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sm-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sections */
+.sm-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sm-section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sm-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.sm-total-time {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* Gemini Nano Drill Card */
+.sm-nano-generate-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s ease;
+}
+
+.sm-nano-generate-btn:hover {
+  background: #1d4ed8;
+}
+
+.sm-nano-card {
+  background: #131b2e;
+  border: 1px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: smFade 0.2s ease-in-out;
+}
+
+@keyframes smFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sm-nano-q-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sm-nano-topic-tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.sm-nano-difficulty {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sm-nano-question {
+  font-size: 12.5px;
+  color: #f1f5f9;
+  line-height: 1.45;
+}
+
+.sm-nano-hint-box {
+  background: #0b0f19;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11.5px;
+  color: #cbd5e1;
+  border-left: 3px solid #f59e0b;
+}
+
+.sm-nano-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.sm-btn-nano-secondary {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sm-btn-nano-secondary:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+.sm-btn-nano-primary {
+  background: #10b981;
+  border: none;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sm-btn-nano-primary:hover {
+  background: #059669;
+}
+
+/* Goal Cards */
+.sm-goal-card {
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 12px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sm-goal-card:hover {
+  border-color: #334155;
+}
+
+.sm-goal-card.completed {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.sm-goal-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Custom Checkbox */
+.sm-checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  user-select: none;
+  margin-top: 2px;
+}
+
+.sm-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sm-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #0b0f19;
+  border: 2px solid #64748b;
+  border-radius: 5px;
+  transition: all 0.15s ease;
+}
+
+.sm-checkbox-container:hover input ~ .sm-checkmark {
+  border-color: #94a3b8;
+}
+
+.sm-checkbox-container input:checked ~ .sm-checkmark {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.sm-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sm-checkbox-container input:checked ~ .sm-checkmark:after {
+  display: block;
+}
+
+/* Goal Details */
+.sm-goal-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sm-goal-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sm-goal-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #f1f5f9;
+}
+
+.sm-time-badge {
+  font-size: 11px;
+  background: #0b0f19;
+  color: #38bdf8;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid #1e3a8a;
+}
+
+.sm-status-chip {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #1e293b;
+  color: #94a3b8;
+}
+
+.sm-status-chip.done {
+  background: #064e3b;
+  color: #34d399;
+}
+
+.sm-shield-chip {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #1e293b;
+  color: #94a3b8;
+}
+
+.sm-shield-chip.active {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.sm-goal-subtext {
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.sm-topic-row {
+  margin-top: 2px;
+}
+
+.sm-inline-input {
+  width: 100%;
+  background: #0b0f19;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+}
+
+.sm-inline-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.sm-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.sm-counter-label {
+  font-size: 11.5px;
+  color: #cbd5e1;
+}
+
+.sm-counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sm-counter-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #ffffff;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm-counter-btn:hover {
+  background: #334155;
+}
+
+.sm-counter-value {
+  font-weight: 700;
+  font-size: 13px;
+  color: #10b981;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* Toggle Switch */
+.sm-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.sm-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sm-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #334155;
+  transition: 0.2s;
+}
+
+.sm-slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.sm-slider.round {
+  border-radius: 20px;
+}
+
+.sm-slider.round:before {
+  border-radius: 50%;
+}
+
+.sm-toggle-switch input:checked + .sm-slider {
+  background-color: #0284c7;
+}
+
+.sm-toggle-switch input:checked + .sm-slider:before {
+  transform: translateX(14px);
+}
+
+/* Time Ratio Bar */
+.sm-ratio-bar {
+  display: flex;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.sm-ratio-segment.goal {
+  background: #10b981;
+}
+
+.sm-ratio-segment.distraction {
+  background: #ef4444;
+}
+
+.sm-ratio-segment.neutral {
+  background: #64748b;
+}
+
+.sm-legend-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.sm-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sm-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.sm-legend-dot.goal {
+  background: #10b981;
+}
+
+.sm-legend-dot.distraction {
+  background: #ef4444;
+}
+
+/* Top Sites List */
+.sm-top-sites {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.sm-site-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+}
+
+.sm-site-name {
+  color: #cbd5e1;
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sm-site-time {
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* Footer Active Site */
+.sm-footer {
+  border-top: 1px solid #1e293b;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sm-current-site {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+}
+
+.sm-current-label {
+  color: #64748b;
+}
+
+.sm-current-domain {
+  font-weight: 600;
+  color: #e2e8f0;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sm-footer-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.sm-btn-xs {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sm-btn-xs:hover {
+  background: #334155;
+  color: #ffffff;
+}

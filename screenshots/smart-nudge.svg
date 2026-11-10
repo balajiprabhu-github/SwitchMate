@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <defs>
+    <filter id="nudgeShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- Simulated Distracting Social Media Page Background -->
+  <rect width="760" height="440" rx="14" fill="#0f172a"/>
+  <rect x="0" y="0" width="760" height="48" rx="14" fill="#1e293b"/>
+  <circle cx="24" cy="24" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="24" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="24" r="6" fill="#10b981"/>
+  <rect x="96" y="11" width="380" height="26" rx="6" fill="#0f172a"/>
+  <text x="112" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">🔒 https://www.reddit.com/r/popular</text>
+
+  <!-- Dimmed Background Content Cards -->
+  <g opacity="0.35" transform="translate(32, 72)">
+    <rect width="420" height="110" rx="10" fill="#1e293b"/>
+    <rect x="16" y="16" width="180" height="14" rx="4" fill="#475569"/>
+    <rect x="16" y="40" width="360" height="10" rx="4" fill="#334155"/>
+    <rect x="16" y="58" width="320" height="10" rx="4" fill="#334155"/>
+    <rect x="16" y="76" width="240" height="10" rx="4" fill="#334155"/>
+
+    <rect x="0" y="128" width="420" height="110" rx="10" fill="#1e293b"/>
+    <rect x="16" y="144" width="210" height="14" rx="4" fill="#475569"/>
+    <rect x="16" y="168" width="350" height="10" rx="4" fill="#334155"/>
+    <rect x="16" y="186" width="290" height="10" rx="4" fill="#334155"/>
+
+    <rect x="0" y="256" width="420" height="90" rx="10" fill="#1e293b"/>
+    <rect x="16" y="272" width="160" height="14" rx="4" fill="#475569"/>
+    <rect x="16" y="296" width="340" height="10" rx="4" fill="#334155"/>
+  </g>
+
+  <!-- Floating SwitchMate AI Focus Nudge Modal (Bottom Right) -->
+  <g transform="translate(366, 86)" filter="url(#nudgeShadow)">
+    <rect width="364" height="326" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Header -->
+    <path d="M 0 14 Q 0 0 14 0 L 350 0 Q 364 0 364 14 L 364 48 L 0 48 Z" fill="#f8fafc"/>
+    <line x1="0" y1="48" x2="364" y2="48" stroke="#f1f5f9" stroke-width="1"/>
+    <rect x="16" y="13" width="22" height="22" rx="6" fill="#10b981"/>
+    <text x="27" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" text-anchor="middle">🧠</text>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0f172a">SwitchMate AI Focus Nudge</text>
+    <text x="342" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">×</text>
+
+    <!-- Body -->
+    <text x="16" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Mindful Check-in ⏱️</text>
+    <text x="16" y="97" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#475569">You've spent <tspan font-weight="700" fill="#dc2626">11 minutes</tspan> scrolling r/popular. Ready</text>
+    <text x="16" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#475569">to pivot back to mastering Kotlin Coroutines &amp; Flow</text>
+    <text x="16" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#475569">for your Android interviews?</text>
+
+    <!-- Target Pill -->
+    <rect x="16" y="148" width="332" height="34" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="28" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#1e40af">🤖 Today's Target: <tspan font-weight="700">Kotlin Coroutines &amp; Flow</tspan></text>
+
+    <!-- Actions -->
+    <rect x="16" y="196" width="332" height="38" rx="8" fill="#10b981"/>
+    <text x="182" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">🚀 Back to Interview Prep</text>
+
+    <rect x="16" y="244" width="162" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="97" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">⏱️ Snooze 5 min</text>
+
+    <rect x="186" y="244" width="162" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="267" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">❌ Close Tab</text>
+
+    <text x="182" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b" text-decoration="underline" text-anchor="middle">Is this relevant to your prep or investments? Mark as relevant</text>
+  </g>
+</svg>

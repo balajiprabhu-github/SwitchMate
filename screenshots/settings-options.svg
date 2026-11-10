@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 610" width="840" height="610">
+  <defs>
+    <linearGradient id="optLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="840" height="610" rx="14" fill="#0b0f19" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <g transform="translate(36, 26)">
+    <rect width="44" height="44" rx="10" fill="url(#optLogoGrad)"/>
+    <text x="22" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" text-anchor="middle">🎯</text>
+    <text x="60" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#ffffff">SwitchMate Settings &amp; Preferences</text>
+    <text x="60" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#94a3b8">Customize your interview focus targets, site categories, and distraction limits.</text>
+
+    <rect x="644" y="4" width="124" height="36" rx="8" fill="#10b981"/>
+    <text x="706" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Save Changes</text>
+    <line x1="0" y1="60" x2="768" y2="60" stroke="#1e293b" stroke-width="1"/>
+  </g>
+
+  <!-- Left Column: Focus Rules & Local Gemini Nano -->
+  <g transform="translate(36, 104)">
+    <rect width="374" height="230" rx="12" fill="#131b2e" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">⏱️ Focus &amp; Distraction Rules</text>
+
+    <text x="20" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#e2e8f0">Daily Distraction Limit Before Nudge (Minutes)</text>
+    <rect x="20" y="64" width="110" height="32" rx="6" fill="#0b0f19" stroke="#334155"/>
+    <text x="34" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#ffffff">10</text>
+
+    <!-- Toggle 1 -->
+    <rect x="20" y="114" width="38" height="22" rx="11" fill="#10b981"/>
+    <circle cx="47" cy="125" r="8" fill="#ffffff"/>
+    <text x="70" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">Enable In-Page Nudges</text>
+    <text x="70" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#94a3b8">Displays accountability modal on distracting sites.</text>
+
+    <!-- Toggle 2 -->
+    <rect x="20" y="166" width="38" height="22" rx="11" fill="#10b981"/>
+    <circle cx="47" cy="177" r="8" fill="#ffffff"/>
+    <text x="70" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#f1f5f9">LinkedIn Doom-Scroll Shield</text>
+    <text x="70" y="192" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#94a3b8">Blocks feed while preserving Jobs &amp; Messaging.</text>
+  </g>
+
+  <!-- Right Column: Local Gemini Nano Guide -->
+  <g transform="translate(430, 104)">
+    <rect width="374" height="230" rx="12" fill="#131b2e" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">🧠 Local Gemini Nano LLM (On-Device AI)</text>
+    <text x="20" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">Uses Chrome's built-in Gemini Nano via Prompt API</text>
+    <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">for private, zero-latency inference on your laptop.</text>
+
+    <rect x="20" y="82" width="334" height="128" rx="8" fill="#0b0f19" stroke="#1e293b"/>
+    <text x="32" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8">To enable Gemini Nano in Google Chrome:</text>
+    <text x="32" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">1. Enable #prompt-api-for-gemini-nano</text>
+    <text x="32" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">2. Enable #optimization-guide-on-device-model</text>
+    <text x="32" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1">3. Relaunch Chrome &amp; update model in chrome://components</text>
+    <text x="32" y="186" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-style="italic" fill="#94a3b8">Automatically falls back to smart heuristics if unavailable.</text>
+  </g>
+
+  <!-- Bottom Row: Domain Categories -->
+  <g transform="translate(36, 352)">
+    <rect width="374" height="220" rx="12" fill="#131b2e" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">🤖 Android Interview Prep Domains</text>
+    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">Active time counts towards your daily study targets.</text>
+
+    <rect x="20" y="64" width="266" height="32" rx="6" fill="#0b0f19" stroke="#334155"/>
+    <text x="32" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">e.g. neetcode.io, proandroiddev.com</text>
+    <rect x="294" y="64" width="60" height="32" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="324" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#e2e8f0" text-anchor="middle">Add</text>
+
+    <!-- Chips -->
+    <g transform="translate(20, 110)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#cbd5e1">
+      <rect x="0" y="0" width="144" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="72" y="17" text-anchor="middle">developer.android.com ×</text>
+
+      <rect x="152" y="0" width="102" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="203" y="17" text-anchor="middle">kotlinlang.org ×</text>
+
+      <rect x="0" y="34" width="98" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="49" y="51" text-anchor="middle">leetcode.com ×</text>
+
+      <rect x="106" y="34" width="92" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="152" y="51" text-anchor="middle">neetcode.io ×</text>
+
+      <rect x="206" y="34" width="88" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="250" y="51" text-anchor="middle">github.com ×</text>
+
+      <rect x="0" y="68" width="128" height="26" rx="13" fill="#1e293b" stroke="#334155"/>
+      <text x="64" y="85" text-anchor="middle">proandroiddev.com ×</text>
+    </g>
+  </g>
+
+  <g transform="translate(430, 352)">
+    <rect width="374" height="220" rx="12" fill="#131b2e" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">📈 Investment &amp; Distraction Domains</text>
+    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">Categorize portfolio portals &amp; doom-scroll triggers.</text>
+
+    <rect x="20" y="64" width="266" height="32" rx="6" fill="#0b0f19" stroke="#334155"/>
+    <text x="32" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">e.g. tradingview.com, zerodha.com</text>
+    <rect x="294" y="64" width="60" height="32" rx="6" fill="#1e293b" stroke="#475569"/>
+    <text x="324" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" fill="#e2e8f0" text-anchor="middle">Add</text>
+
+    <!-- Chips -->
+    <g transform="translate(20, 110)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#cbd5e1">
+      <rect x="0" y="0" width="96" height="26" rx="13" fill="#064e3b" stroke="#10b981" stroke-opacity="0.4"/>
+      <text x="48" y="17" fill="#34d399" text-anchor="middle">zerodha.com ×</text>
+
+      <rect x="104" y="0" width="82" height="26" rx="13" fill="#064e3b" stroke="#10b981" stroke-opacity="0.4"/>
+      <text x="145" y="17" fill="#34d399" text-anchor="middle">groww.in ×</text>
+
+      <rect x="194" y="0" width="116" height="26" rx="13" fill="#064e3b" stroke="#10b981" stroke-opacity="0.4"/>
+      <text x="252" y="17" fill="#34d399" text-anchor="middle">tradingview.com ×</text>
+
+      <rect x="0" y="38" width="88" height="26" rx="13" fill="#450a0a" stroke="#ef4444" stroke-opacity="0.4"/>
+      <text x="44" y="55" fill="#fca5a5" text-anchor="middle">reddit.com ×</text>
+
+      <rect x="96" y="38" width="104" height="26" rx="13" fill="#450a0a" stroke="#ef4444" stroke-opacity="0.4"/>
+      <text x="148" y="55" fill="#fca5a5" text-anchor="middle">instagram.com ×</text>
+
+      <rect x="208" y="38" width="96" height="26" rx="13" fill="#450a0a" stroke="#ef4444" stroke-opacity="0.4"/>
+      <text x="256" y="55" fill="#fca5a5" text-anchor="middle">youtube.com ×</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwitchMate Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="sm-options-container">
+    <header class="sm-options-header">
+      <div class="sm-header-brand">
+        <span class="sm-options-logo">🎯</span>
+        <div>
+          <h1>SwitchMate Settings & Preferences</h1>
+          <p>Customize your interview focus targets, site categories, and distraction limits.</p>
+        </div>
+      </div>
+      <button id="sm-save-all-btn" class="sm-btn-save">Save Changes</button>
+    </header>
+
+    <div class="sm-options-grid">
+      <!-- General Rules -->
+      <section class="sm-card">
+        <h2>⏱️ Focus & Distraction Rules</h2>
+        <div class="sm-form-group">
+          <label for="input-distraction-limit">Daily Distraction Limit Before Nudge (Minutes)</label>
+          <input type="number" id="input-distraction-limit" min="1" max="120" value="10">
+          <span class="sm-helper-text">You will be gently prompted when exceeding this limit on social/entertainment sites.</span>
+        </div>
+
+        <div class="sm-form-group checkbox-row">
+          <label class="sm-switch">
+            <input type="checkbox" id="check-enable-nudges" checked>
+            <span class="sm-slider-opt"></span>
+          </label>
+          <div>
+            <strong>Enable In-Page Nudges</strong>
+            <p class="sm-helper-text">Displays a helpful accountability modal on distracting sites.</p>
+          </div>
+        </div>
+
+        <div class="sm-form-group checkbox-row">
+          <label class="sm-switch">
+            <input type="checkbox" id="check-linkedin-shield" checked>
+            <span class="sm-slider-opt"></span>
+          </label>
+          <div>
+            <strong>LinkedIn Doom-Scroll Shield</strong>
+            <p class="sm-helper-text">Blocks the endless home feed while preserving Jobs, Messages, Network, and Profile.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Gemini Nano LLM Section -->
+      <section class="sm-card">
+        <h2>🧠 Local Gemini Nano LLM (On-Device AI)</h2>
+        <p class="sm-helper-text">
+          SwitchMate uses Chrome's built-in <strong>Gemini Nano</strong> model via the Chrome Prompt API (<code>window.ai</code> / <code>ai.languageModel</code>) to run private, zero-latency inference directly on your laptop without cloud API keys.
+        </p>
+        <div class="sm-ai-guide-box">
+          <h3 style="font-size: 13px; color: #38bdf8; margin-bottom: 8px;">To enable Gemini Nano in Google Chrome:</h3>
+          <ol style="margin-left: 20px; font-size: 12.5px; color: #cbd5e1; line-height: 1.6;">
+            <li>Visit <code>chrome://flags/#prompt-api-for-gemini-nano</code> &rarr; select <strong>Enabled</strong>.</li>
+            <li>Visit <code>chrome://flags/#optimization-guide-on-device-model</code> &rarr; select <strong>Enabled BypassPerfRequirement</strong>.</li>
+            <li>Relaunch Chrome.</li>
+            <li>Visit <code>chrome://components/</code> &rarr; find <strong>Optimization Guide On Device Model</strong> &rarr; click <strong>Check for update</strong> to download weights.</li>
+          </ol>
+          <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">
+            <em>Note: If Gemini Nano is not enabled, SwitchMate seamlessly falls back to smart local heuristics so you always stay protected!</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Category Lists -->
+      <section class="sm-card">
+        <h2>🤖 Android Interview Prep Domains</h2>
+        <p class="sm-helper-text">Sites where your active time counts towards your study targets.</p>
+        <div class="sm-tag-input-box">
+          <input type="text" id="input-new-android" placeholder="e.g. neetcode.io, raywenderlich.com" />
+          <button id="btn-add-android" class="sm-btn-add">Add</button>
+        </div>
+        <div class="sm-chips-container" id="chips-android"></div>
+      </section>
+
+      <section class="sm-card">
+        <h2>📈 Investment & Portfolio Domains</h2>
+        <p class="sm-helper-text">Sites for tracking market portfolios, research, and financial watchlists.</p>
+        <div class="sm-tag-input-box">
+          <input type="text" id="input-new-investments" placeholder="e.g. tradingview.com, zerodha.com" />
+          <button id="btn-add-investments" class="sm-btn-add">Add</button>
+        </div>
+        <div class="sm-chips-container" id="chips-investments"></div>
+      </section>
+
+      <section class="sm-card">
+        <h2>⚠️ Distraction & Doom-Scroll Domains</h2>
+        <p class="sm-helper-text">Sites that trigger time-limit warnings when overspent.</p>
+        <div class="sm-tag-input-box">
+          <input type="text" id="input-new-distraction" placeholder="e.g. reddit.com, instagram.com" />
+          <button id="btn-add-distraction" class="sm-btn-add">Add</button>
+        </div>
+        <div class="sm-chips-container" id="chips-distraction"></div>
+      </section>
+    </div>
+
+    <footer class="sm-options-footer">
+      <button id="btn-reset-defaults" class="sm-btn-danger">Reset to Defaults</button>
+      <span id="save-status-toast" class="sm-save-toast">Settings saved!</span>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

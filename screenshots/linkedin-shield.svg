@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 530" width="820" height="530">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Browser Window Background -->
+  <rect width="820" height="530" rx="14" fill="#f4f2ee" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- LinkedIn Top Global Navigation Bar (Preserved by SwitchMate) -->
+  <rect x="1.5" y="1.5" width="817" height="54" rx="12" fill="#ffffff"/>
+  <line x1="0" y1="55" x2="820" y2="55" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- LinkedIn Logo & Search -->
+  <rect x="28" y="11" width="34" height="34" rx="6" fill="#0a66c2"/>
+  <text x="45" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle">in</text>
+  <rect x="72" y="12" width="210" height="32" rx="6" fill="#edf3f8"/>
+  <text x="88" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#64748b">🔍 Search Jobs, Companies...</text>
+
+  <!-- LinkedIn Nav Items -->
+  <g transform="translate(360, 10)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    <text x="30" y="16" font-size="15">🏠</text>
+    <text x="30" y="34" font-weight="600" fill="#0f172a">Home</text>
+    <rect x="6" y="42" width="48" height="2" fill="#0f172a"/>
+
+    <text x="105" y="16" font-size="15">👥</text>
+    <text x="105" y="34">My Network</text>
+
+    <text x="180" y="16" font-size="15">💼</text>
+    <text x="180" y="34">Jobs</text>
+
+    <text x="255" y="16" font-size="15">💬</text>
+    <text x="255" y="34">Messaging</text>
+
+    <text x="335" y="16" font-size="15">🔔</text>
+    <text x="335" y="34">Notifications</text>
+  </g>
+
+  <!-- SwitchMate Shield Card -->
+  <g transform="translate(110, 86)">
+    <rect width="600" height="412" rx="14" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#cardShadow)"/>
+
+    <!-- Card Header -->
+    <text x="28" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#0f172a">🎯 LinkedIn Feed Blocked</text>
+    <text x="28" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#64748b"><tspan font-family="monospace" fill="#0f172a">/feed/</tspan> is blocked to prevent doom-scrolling. Use the top bar or quick links below!</text>
+
+    <!-- Shield Active Badge -->
+    <rect x="448" y="24" width="124" height="30" rx="15" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="510" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#065f46" text-anchor="middle">🛡️ Shield Active</text>
+
+    <line x1="28" y1="86" x2="572" y2="86" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Today's Accountability Checklist -->
+    <g transform="translate(28, 102)">
+      <rect width="544" height="142" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#475569" letter-spacing="0.5">📋 TODAY'S ACCOUNTABILITY CHECKLIST</text>
+
+      <!-- Item 1 -->
+      <text x="16" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" fill="#334155">🤖 <tspan font-weight="700">Android Interview Prep:</tspan> Kotlin Coroutines, Flow &amp; System Design</text>
+      <rect x="452" y="40" width="76" height="22" rx="11" fill="#fef3c7"/>
+      <text x="490" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#92400e" text-anchor="middle">4 Solved</text>
+      <line x1="16" y1="70" x2="528" y2="70" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+
+      <!-- Item 2 -->
+      <text x="16" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" fill="#334155">📈 <tspan font-weight="700">Track Investments:</tspan> Portfolio review &amp; research</text>
+      <rect x="458" y="78" width="70" height="22" rx="11" fill="#dcfce7"/>
+      <text x="493" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#166534" text-anchor="middle">✅ Done</text>
+      <line x1="16" y1="108" x2="528" y2="108" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+
+      <!-- Item 3 -->
+      <text x="16" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" fill="#334155">🏃 <tspan font-weight="700">Workout &amp; Mobility:</tspan> Movement &amp; health</text>
+      <rect x="458" y="114" width="70" height="22" rx="11" fill="#dcfce7"/>
+      <text x="493" y="129" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#166534" text-anchor="middle">✅ Done</text>
+    </g>
+
+    <!-- Quick Action Buttons -->
+    <g transform="translate(28, 262)">
+      <text x="0" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#334155">Access other LinkedIn sections directly:</text>
+
+      <!-- Row 1 -->
+      <rect x="0" y="26" width="266" height="40" rx="8" fill="#0a66c2"/>
+      <text x="133" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">💼 Browse Android Jobs</text>
+
+      <rect x="278" y="26" width="266" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="411" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#0f172a" text-anchor="middle">💬 Recruiter Messages</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="76" width="266" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="133" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#0f172a" text-anchor="middle">👥 Expand Network</text>
+
+      <rect x="278" y="76" width="266" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="411" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#0f172a" text-anchor="middle">🔔 Check Notifications</text>
+    </g>
+
+    <!-- Footer Controls -->
+    <line x1="28" y1="388" x2="572" y2="388" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="28" y="404" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">SwitchMate Interview Companion</text>
+    <text x="572" y="404" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b" text-decoration="underline" text-anchor="end">Allow feed for 5 minutes</text>
+  </g>
+</svg>

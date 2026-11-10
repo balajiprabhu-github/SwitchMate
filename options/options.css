@@ -1,0 +1,292 @@
+/* SwitchMate - Options Page CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  min-height: 100vh;
+  padding: 32px 20px;
+}
+
+.sm-options-container {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sm-options-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 20px;
+}
+
+.sm-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sm-options-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.sm-options-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sm-options-header p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.sm-btn-save {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.sm-btn-save:hover {
+  background: #059669;
+}
+
+.sm-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sm-card {
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sm-card h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.sm-helper-text {
+  font-size: 12.5px;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+.sm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sm-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.sm-form-group input[type="number"] {
+  width: 140px;
+  background: #0b0f19;
+  border: 1px solid #334155;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Switch */
+.sm-switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.sm-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sm-slider-opt {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #334155;
+  border-radius: 22px;
+  transition: 0.2s;
+}
+
+.sm-slider-opt:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.sm-switch input:checked + .sm-slider-opt {
+  background-color: #10b981;
+}
+
+.sm-switch input:checked + .sm-slider-opt:before {
+  transform: translateX(16px);
+}
+
+/* Chips & Inputs */
+.sm-tag-input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.sm-tag-input-box input {
+  flex: 1;
+  background: #0b0f19;
+  border: 1px solid #334155;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.sm-tag-input-box input:focus {
+  outline: none;
+  border-color: #10b981;
+}
+
+.sm-btn-add {
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sm-btn-add:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+.sm-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.sm-chip {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sm-chip-remove {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.sm-chip-remove:hover {
+  color: #ef4444;
+}
+
+/* Footer */
+.sm-options-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+
+.sm-btn-danger {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sm-btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.sm-save-toast {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sm-save-toast.visible {
+  opacity: 1;
+}
+
+.sm-ai-guide-box {
+  background: #0b0f19;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-top: 6px;
+}
